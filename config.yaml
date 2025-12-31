@@ -8,7 +8,7 @@ artifacts:
   directory: "artifacts"
   scaler_filename: "scaler.pkl"
   xgb_model_filename: "xgb_model.pkl"
-  ann_model_filename: "ann_mlp_model.pkl"
+  mlp_model_filename: "ann_mlp_model.pkl"
 
 scaler:
   type: "StandardScaler"

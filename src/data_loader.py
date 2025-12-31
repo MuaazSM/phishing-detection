@@ -6,7 +6,3 @@ def load_dataset(path):
     df = pd.read_csv(path)
     print(f"Dataset loaded with shape: {df.shape}")
     return df
-
-if __name__ == "__main__":
-    df = load_dataset("data/phising.csv")
-    print(df.head())

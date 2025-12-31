@@ -3,7 +3,7 @@ import joblib
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-from src.utils import print_header, ensure_artifacts_dir
+from src.utils import print_header, ensure_artif_dir
 
 def preprocess_data(df, target_col, test_size, random_state, scaler_path):
     print_header("PREPROCESSING DATA")
@@ -22,7 +22,7 @@ def preprocess_data(df, target_col, test_size, random_state, scaler_path):
     X_test_scaled = scaler.transform(X_test)
 
     # Create artifacts directory properly
-    ensure_artifacts_dir(os.path.dirname(scaler_path))
+    ensure_artif_dir(os.path.dirname(scaler_path))
 
     # Save scaler
     joblib.dump(scaler, scaler_path)
